@@ -108,7 +108,7 @@
 <meta property="og:description" content="在Github创建一个仓库(这个无需多累赘,注意一定要选择上 MIT) .  clone 远程库到本地,(我这里用的是 Github 客户端,首先在本地创建一个空文件夹,登录github账户,点击file –&amp;gt;clone repository.选择对应的项目和 本地关联文件夹)  在文件夹下创建项目工程(完整的demo,能跑起来的),把自己的开源组件放到一个独立的文件夹下  提交项目到gi">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xiaomage1478.github.io/xiaomage.github.io/2018/03/28/上传私有库到cocoapods/success.png">
-<meta property="og:updated_time" content="2018-07-20T05:26:33.761Z">
+<meta property="og:updated_time" content="2018-07-20T05:28:24.714Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="上传私有库到Cocoapods">
 <meta name="twitter:description" content="在Github创建一个仓库(这个无需多累赘,注意一定要选择上 MIT) .  clone 远程库到本地,(我这里用的是 Github 客户端,首先在本地创建一个空文件夹,登录github账户,点击file –&amp;gt;clone repository.选择对应的项目和 本地关联文件夹)  在文件夹下创建项目工程(完整的demo,能跑起来的),把自己的开源组件放到一个独立的文件夹下  提交项目到gi">
@@ -389,22 +389,20 @@
 </li>
 <li><p>提交项目到github,命令<code>$ git push origin master</code></p>
 </li>
-<li><p>注册trunk<br><code>$ pod trunk register eloy@example.com &#39;Eloy Durán’ #注册会发带验证链接的邮件到邮箱地址，名称无法修改
-$ pod trunk me    #可查询注册信息。</code></p>
+<li><p>注册trunk </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod trunk register eloy@example.com &apos;Eloy Durán’ #注册会发带验证链接的邮件到邮箱地址，名称无法修改</span><br><span class="line">$ pod trunk me    #可查询注册信息。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>生成podspec 文件,<code>$ pod spec create xxxxx</code><br>这里最好复制已经发布的 podspec,这里就不多累赘了</p>
 </li>
-<li><p>打tag<br><code>$ git tag 1.0.1    #给源代码打版本标签，与podspec文件中version一致即可
-$ git push --tag</code></p>
+<li><p>打tag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git tag 1.0.1    #给源代码打版本标签，与podspec文件中version一致即可</span><br><span class="line">$ git push --tag</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>验证 podspec 文件合法性,<code>$ pod lib lint</code>,如有问题可参考   [链接] ( <a href="https://www.jianshu.com/p/a181b47f8881" target="_blank" rel="noopener">https://www.jianshu.com/p/a181b47f8881</a>)</p>
 </li>
-<li><p>更新github 仓库<br><code>$ git add .                   #将当前目录下所有文件和子目录的修改记录到Git索引中
-$ git status                  #列出当前目录下被修改还未提交的状态
-$ git commit -m ‘first commit’     #提交被add的改动
-$ git push origin master           #push代码到Git</code></p>
+<li><p>更新github 仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git add .                   #将当前目录下所有文件和子目录的修改记录到Git索引中</span><br><span class="line">$ git status                  #列出当前目录下被修改还未提交的状态</span><br><span class="line">$ git commit -m ‘first commit’     #提交被add的改动</span><br><span class="line">$ git push origin master           #push代码到Git</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>发布到cocoapods<br><code>$  pod trunk push xxxxxxx.podspec</code><br>显示如下信息则表示发布成功<br><img src="success.png" alt="success"></p>
+<li><p>发布到cocoapods <code>$  pod trunk push xxxxxxx.podspec</code><br>显示如下信息则表示发布成功<br><img src="success.png" alt="success"></p>
 </li>
 <li><p>执行 <code>$ pod trunk me</code> 可查看到相关pods</p>
 </li>
@@ -458,15 +456,15 @@ $ git push origin master           #push代码到Git</code></p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/28/博客之旅-1/" rel="next" title="博客之旅">
+                <i class="fa fa-chevron-left"></i> 博客之旅
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/28/博客之旅-1/" rel="prev" title="博客之旅">
-                博客之旅 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
